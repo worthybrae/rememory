@@ -1,6 +1,6 @@
 # Rememory Project
 
-!\[Animation](.rememory.gif)
+[Animation](rememory.gif)
 
 ## Introduction
 
