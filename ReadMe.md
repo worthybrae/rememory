@@ -1,14 +1,14 @@
 # Rememory Project
 
-\!\[Animation](.rememory.gif)
+!\[Animation](.rememory.gif)
 
 ## Introduction
 
-Rememory is a project focused on generating mesmerizing 3D visual designs. The project uses Python and leverages the power of the Pygame library to create intricate visual patterns and designs. Whether you're looking for rotating cubes, abstract patterns, or any form of digital art, Rememory has a module for it.
+Rememory is a project focused on generating 3D visual designs. The project uses Python and leverages the power of the Pygame library to create intricate visual patterns and designs. Whether you're looking for rotating cubes, abstract patterns, or any form of digital art, Rememory has a module for it.
 
 ## Project Structure
 
-\```
+```
 rememory/
 │
 ├── generation/            # Art generation modules.
@@ -26,7 +26,7 @@ rememory/
 └── utils/
     ├── math_utils.py      # Mathematical utilities and transformations.
     └── ...
-\```
+```
 
 ## Getting Started
 
@@ -39,32 +39,32 @@ rememory/
 ### Installation
 
 1. Clone the repository:
-\```bash
+```bash
 git clone https://github.com/yourusername/rememory.git
-\```
+```
 
 2. Navigate to the project directory:
-\```bash
+```bash
 cd rememory
-\```
+```
 
 3. Set up a virtual environment:
-\```bash
+```bash
 python3 -m venv venv
 source venv/bin/activate  # On Windows, use: venv\Scripts\activate
-\```
+```
 
 4. Install the required packages:
-\```bash
+```bash
 pip install -r requirements.txt  # Assuming you have a requirements file.
-\```
+```
 
 ### Running the Project
 
 From the root directory, run:
-\```bash
+```bash
 python main.py
-\```
+```
 
 ## Features
 
