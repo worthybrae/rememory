@@ -1,6 +1,6 @@
-# Rememory Project
+# Rememory
 
-![Animation](rememory.gif)
+![rememory](rememory.gif)
 
 ## Introduction
 
