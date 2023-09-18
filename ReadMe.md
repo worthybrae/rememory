@@ -11,30 +11,20 @@ Rememory is a project focused on generating 3D visual designs. The project uses 
 ```
 rememory/
 │
-├── generation/            # Art generation modules.
-│   ├── cube_rotation.py   # 3D rotating cube module.
-│   ├── abstract_patterns.py
+├── generation/                # Art generation modules.
+│   ├── distorted_cube.py      # 3D rotating cube module.
+│   ├── random_rectangles.py
 │   ├── ...
 │
-├── processing/            # Infrastructure and display management.
-│   ├── display.py         # Manages display/window setup.
-│   ├── renderer.py        # Manages rendering and drawing frames.
+├── processing/                # Infrastructure and display management.
+│   ├── display.py             # Manages display/window setup.
+│   ├── renderer.py            # Manages rendering and drawing frames.
 │   ...
 │
-├── assets/                # External assets like textures, images, shaders.
-│
 └── utils/
-    ├── math_utils.py      # Mathematical utilities and transformations.
+    ├── math_utils.py          # Mathematical utilities and transformations.
     └── ...
 ```
-
-## Getting Started
-
-### Prerequisites
-
-- Python 3.x
-- Pygame
-- (Any other dependencies)
 
 ### Installation
 
@@ -71,16 +61,3 @@ python main.py
 - **Dynamic 3D Designs**: Experience vibrant and evolving 3D designs that captivate the viewer.
 - **Modular Architecture**: Easily add new art modules in the `generation` directory to expand the visual possibilities.
 - **Customizable**: Tweak parameters, combine modules, or add your own to create unique visuals.
-
-## Contributing
-
-Contributions are welcome! If you have a design or pattern in mind, feel free to add a new module under the `generation` directory and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the \[LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- Thanks to the Pygame community for the invaluable resources and examples.
-- (Any other acknowledgments or shout-outs you'd like to include.)
