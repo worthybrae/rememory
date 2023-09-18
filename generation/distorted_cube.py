@@ -25,6 +25,7 @@ edges = [
 ]
 
 angle = 0
+angle_increment = 2 * math.pi / 360
 
 def transform_3d_to_2d(x, y, z, screen_width, screen_height):
     """Simple perspective projection."""
@@ -74,6 +75,6 @@ def generate_frame(screen_width, screen_height):
         pygame.draw.line(frame, WHITE, transform_3d_to_2d(*rotated_vertices[edge[0]], screen_width, screen_height), 
                                     transform_3d_to_2d(*rotated_vertices[edge[1]], screen_width, screen_height))
 
-    angle += 0.02
+    angle += angle_increment
 
     return frame
