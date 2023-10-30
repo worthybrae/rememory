@@ -1,10 +1,20 @@
 import pygame
+import sys
 import math
 
+pygame.init()
+
+# Screen dimensions
+WIDTH, HEIGHT = 800, 600
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
+pygame.display.set_caption("3D Cube Rotation")
+
+# Colors
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 
 # Define vertices of a cube
+cube_position = [WIDTH // 2, HEIGHT // 2, 0]
 side_length = 100
 vertices = [
     [-side_length, -side_length, -side_length],
@@ -18,26 +28,34 @@ vertices = [
 ]
 
 edges = [
-    (0, 1), (0, 2), (0, 4),
-    (1, 3), (1, 5), (2, 3),
-    (2, 6), (3, 7), (4, 5),
-    (4, 6), (5, 7), (6, 7)
+    (0, 1),
+    (0, 2),
+    (0, 4),
+    (1, 3),
+    (1, 5),
+    (2, 3),
+    (2, 6),
+    (3, 7),
+    (4, 5),
+    (4, 6),
+    (5, 7),
+    (6, 7)
 ]
 
 angle = 0
 
-def transform_3d_to_2d(x, y, z, screen_width, screen_height):
+def transform_3d_to_2d(x, y, z):
     """Simple perspective projection."""
-    cube_position = [screen_width // 2, screen_height // 2]
     scale = 500 / (z + 500)
     return (int(x * scale + cube_position[0]), int(y * scale + cube_position[1]))
 
-def generate_frame(screen_width, screen_height):
-    global angle
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
 
-    frame = pygame.Surface((screen_width, screen_height))
-
-    frame.fill(BLACK)
+    screen.fill(BLACK)
 
     # Rotation matrices
     rotation_x = [
@@ -71,9 +89,9 @@ def generate_frame(screen_width, screen_height):
 
     # Draw edges
     for edge in edges:
-        pygame.draw.line(frame, WHITE, transform_3d_to_2d(*rotated_vertices[edge[0]], screen_width, screen_height), 
-                                    transform_3d_to_2d(*rotated_vertices[edge[1]], screen_width, screen_height))
+        pygame.draw.line(screen, WHITE, transform_3d_to_2d(*rotated_vertices[edge[0]]), transform_3d_to_2d(*rotated_vertices[edge[1]]))
+
+    pygame.display.flip()
+    pygame.time.wait(16)
 
     angle += 0.02
-
-    return frame
